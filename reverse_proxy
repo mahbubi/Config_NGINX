@@ -1,0 +1,15 @@
+server {
+     listen       80;
+     server_name  www.domain.com;
+     location / {
+          proxy_pass "http://127.0.0.1:9001" ;
+     }
+}
+server {
+     listen       80;
+     server_name  dev.domain.com;
+
+     location / {
+          proxy_pass "http://127.0.0.1:9021" ;
+     }
+}
